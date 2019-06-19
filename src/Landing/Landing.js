@@ -5,6 +5,7 @@ export default class Landing extends Component {
         return (
             <div>
                 <p>Hello World!</p>
+<h1>Test</h1>
             </div>
         )
     }
