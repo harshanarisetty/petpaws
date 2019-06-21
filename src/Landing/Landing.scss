@@ -1,0 +1,169 @@
+
+.landing{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height:100%;
+    
+}
+
+.landing div{
+    background-image: linear-gradient(+90deg,#D9DDE0, #ECF0EC);
+}
+/* Nav CSS */
+
+
+.nav{
+    z-index: 10;
+    position: initial;
+    height: 25px;
+    margin:0 5px; 
+    padding: 15px 20px;
+
+}
+
+.logo{
+    height: 25px;
+}
+.gap{
+    margin:0 5px;
+}
+
+.name{
+    position: absolute;
+    margin-top: 4px;
+    font-weight: bolder;
+}
+.ham{
+    margin-right: 0px;
+    position: relative;
+    float: right;
+    
+}
+
+.ham span{
+    display: block;
+    height: 4px;
+    width: 25px;
+    background-color: black;
+    margin: 4px 0px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+
+
+  .ham.active .ham-line-one{
+    margin-bottom:0px;
+    transform: rotate(-45deg);
+  }
+  .ham.active{
+      margin-top:10px;
+  }
+  .ham.active .ham-line-two{
+      transition: 1s;
+      display: none;
+  }
+  .ham.active .ham-line-three{
+    margin-top:-4px;
+    transform: rotate(45deg);
+  }
+  .menu.active ul{
+    margin: 0px;
+    padding: 0px;
+}
+  
+  .menu-items{
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+  }
+
+  .menu-items li{
+      padding:10px 0px;
+  }
+
+
+
+.menu.active{
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+    width: 100%;
+    
+    transition: 0.3s;
+    background-color: rgb(218, 214, 209);
+    background-image: linear-gradient(-90deg,#D9DDE0, #ECF0EC);
+    -webkit-animation: fadein 0.2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.2s; /* Firefox < 16 */
+     -ms-animation: fadein 0.2s; /* Internet Explorer */
+      -o-animation: fadein 0.2s; /* Opera < 12.1 */
+         animation: fadein 0.2s;
+}
+
+
+@keyframes fadein {
+    from { margin-top : -100px; opacity: 0;}
+    to   { margin-top : 0px; opacity: 1;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { margin-top : -100px; opacity: 0;}
+    to   { margin-top : 0px; opacity: 1;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { margin-top : -100px; opacity: 0;}
+    to   { margin-top : 0px; opacity: 1;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { margin-top : -100px; opacity: 0;}
+    to   { margin-top : 0px; opacity: 1;}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { margin-top : -100px; opacity: 0;}
+    to   { margin-top : 0px; opacity: 1;}
+}
+
+
+/* head CSS */
+
+.head{
+    position: absolute; 
+    width: calc(100%);
+    /* top: 0px; */
+    /* height: 100%; */
+    height: -webkit-calc(100% - 55px);
+    height: -moz-calc(100% - 550px);
+    height: calc(100% - 55px);
+    background-color: white;
+    /* margin:10vw; */
+}
+
+.main{
+    position: absolute;
+    font-size: 5vw;
+    width: 40%;
+    margin: 10%;
+    font-weight: bolder;
+    /* text-transform: uppercase; */
+    /* font-family: 'Chunk', sans-serif; */
+    /* letter-spacing: 8px; */
+
+
+}
+
+.pet{
+    /* scale: 0.2; */
+    object-fit: contain;
+    max-width:100%;
+    max-height: fit-content;
+}
