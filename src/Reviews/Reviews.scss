@@ -1,0 +1,74 @@
+
+.wrapper{
+  
+  
+  margin:40px 10vw;
+  // height:200px;
+  .review-card{
+    display: grid;
+    // background-color: rgb(242, 247, 242);
+  grid-template-columns:30px 10px auto 10px 30px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 30px;
+    border-radius: 10px;
+  grid-template-rows:1fr; 
+    
+  }
+  .review-block{
+    .horizaontal-line{
+      height: 2px;
+      background-color: rgb(177, 177, 177);
+      width: 40%;
+      display: block;
+      position: relative;
+      opacity: 0.9;
+      // margin-left: auto;
+      
+    
+      // margin-right: auto;
+      // margin-bottom: 20px;
+      margin:20px auto;
+    }
+    // background-color: rgb(242, 247, 242);
+    text-align: center;
+    padding: 20px;
+    grid-column: 2/4;
+    grid-row:1;
+  }
+  .review-control:hover{
+    transition: filter 0.3s;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.432));
+  }
+  .review-control{
+    
+    vertical-align: middle;
+    z-index: 10;
+    
+    
+    }
+    #back{
+      
+      grid-column: 1/2;
+    grid-row:1;
+    justify-items: center;
+    align-self: center;
+    -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+      -moz-transform: rotate(180deg);        /* FF */
+      -o-transform: rotate(180deg);          /* Opera */
+      -ms-transform: rotate(180deg);         /* IE9 */
+      transform: rotate(180deg);   
+
+    }
+    #next{
+      grid-column: 4/5;
+      grid-row:1;
+      display: block;
+      float: right;
+      justify-items: center;
+      align-self: center;
+      
+    }
+}
+
+
+

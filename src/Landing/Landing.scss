@@ -1,4 +1,4 @@
-
+@import "../asserts/include_media.scss";
 .landing{
     margin: 0px;
     padding: 0px;
@@ -7,6 +7,7 @@
       
 }
 /* Nav CSS */
+
 
 .navbar{
         .nav{
@@ -131,41 +132,98 @@
 /* head CSS */
 
 .head{
-    background-image: url('../asserts/pet_small.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 60% 20vh; 
-    background-size: cover;
     position: absolute; 
     width: calc(100%);
-    /* top: 0px; */
-    /* height: 100%; */
-    height: -webkit-calc(100% - 55px);
-    height: -moz-calc(100% - 550px);
-    height: calc(100% - 55px);
+    height: -webkit-calc(800% - 55px);
+    height: -moz-calc(80% - 550px);
+    height: calc(80% - 55px);
     overflow: hidden;
     background-color: white;
-    /* margin:10vw; */
-    .main{
-        // position: absolute;
-        font-size: 9vw;
-        width: 70%;
-        margin:10% 10% 0% 10%;
-        font-weight: bolder;
-        /* text-transform: uppercase; */
-        color: black;
-        // text-shadow: 2px 2px #4b4848;
-        // font-family: 'Chunk', sans-serif;
-        
 
-        .check{
-            font-family: 'Chunk', sans-serif;
-            letter-spacing: 8px; 
-            font-size: 10vw;
-            font-weight: 900;
-            color: #2EE59D;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    .left{
+        z-index: 4;
+
+        
+        @include media(">phone", "<tablet") {
+            transition: 0.2s;
+            font-size: 8vw;
+            grid-column: 1/4;
+            grid-row:1;
+           
+          }
+          @include media(">tablet", "<desktop") {
+            transition: 0.2s;
+            font-size: 6vw;
+            grid-column: 1/3;
+            grid-row:1;
+           
+          }
+          @include media(">=desktop",) {
+            transition: 0.2s;
+            font-size: 4vw;
+            grid-column: 1/4;
+            grid-row:1;
+          }
+
+        
+        .main{
+            // position: absolute;
+        //    font-size: 7vw;
+            
+            width: 70%;
+            margin:10% 10% 0% 10%;
+            font-weight: bolder;
+            /* text-transform: uppercase; */
+            color: black;
+            // text-shadow: 2px 2px #4b4848;
+            // font-family: 'Chunk', sans-serif;
+            
+    
+            .check{
+                font-family: 'Chunk', sans-serif;
+                letter-spacing: 8px; 
+                // font-size: 10vw;
+                font-weight: 900;
+                color: #2EE59D;
+            }
         }
     }
+    .right{
+        grid-column: 1/5;
+        grid-row:1;
+        transition: 0.2s;
+        img{
+        
+
+          @include media(">phone", "<tablet") {
+                
+            transition:opacity 0.2s;
+            opacity: 0.5;
+            
+        }
+        @include media(">tablet", "<desktop") {
+          
+         
+        }
+        @include media(">=desktop",) {
+          
+        }
+        
+            
+            position: absolute;
+            z-index: 0;
+            bottom: -40px;
+            right:-50px;    
+            // height:300px;
+            height: 90vh;
+            
+            
+        }
+    }
+
+   
 .calltoaction{
 .wrap {
     // height: 100%;
@@ -239,12 +297,13 @@
 // Services CSS
 
 .about{
-    
-    margin-top: -webkit-calc(100vh - 55px);
-    margin-top: -moz-calc(100vh - 550px);
-    margin-top: calc(100vh - 55px);
+    background-color: rgba(170, 170, 170, 0.295);
+    margin-top: -webkit-calc(80vh - 55px);
+    margin-top: -moz-calc(80vh - 550px);
+    margin-top: calc(80vh - 55px);
     width: 100%;
     height: 100%;
+    
 
     
 }
@@ -273,12 +332,14 @@
 }
 
 .content{
-    margin: auto;
+    margin: 40px auto;
     font-size: 1em;
-    text-align: center;
+    text-align: left;
     width:90%;
     transition: 0.3s;
     -webkit-line-clamp: 3;
+    line-height: 30px;
+
     
 }
 .small_content{
@@ -300,4 +361,41 @@
 .about_read_state:hover{
     transition: 0.3s;
     color: rgb(3, 28, 73);
+}
+
+.services{
+    width: 100%;
+    .section-description{
+        max-width: 800px;
+        // min-width: 450px;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+.cards{
+    // background-image: url("https://image.shutterstock.com/image-vector/dog-paw-cat-heart-love-260nw-754983577.jpg");
+    
+    background-size: 40%;
+    display: grid;
+    grid-gap: 20px;
+
+    @include media(">phone", "<tablet") {
+    padding: 30px 10vw;
+       grid-template-columns: 1fr;
+       grid-template-row:auto;
+      }
+      @include media(">tablet", "<desktop") {
+        padding: 30px 4vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-row:auto;
+       
+      }
+      @include media(">=desktop",) {
+        padding: 30px 10vw;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-row:auto;
+      }
+
+  
 }

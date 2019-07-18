@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+@import "../asserts/include_media.scss";
+
+$active: turquoise;
+
+.wrapper{
+  widows: 100%;
+  .contact-container{
+    display: grid;
+    overflow: hidden;
+    background-color: rgb(232,232,232);
+    @include media("<phone") {
+                
+      grid-template-columns: 1fr;
+      grid-template-rows: 2;
+      .left{
+        img{
+          width:90vw;
+          
+          margin-left:-25px;
+        }
+      
+      }
+      
+  }
+    @include media(">phone", "<tablet") {
+                
+      grid-template-columns: 1fr;
+      grid-template-rows: 2;
+      .left{
+        img{
+          width:90vw;
+          margin-left:-25px;
+        }
+      
+      }
+      
+  }
+  @include media(">tablet", "<desktop") {
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    .left{
+      img{
+        width:40vw;
+      }
+    
+    }
+  }
+  @include media(">=desktop",) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    .left{
+      img{
+        width:40vw;
+      }
+    
+    }
+  }
+    
+   
+
+   
+    .right{
+      
+      align-self: center;
+      input,textarea{
+        padding:10px;
+        border-radius: 10px;
+        border:none;
+        margin:10px 0px;
+        width: 80%;
+        
+        border:none;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        text-indent:10px;
+      }
+      
+  
+     input:focus { outline:none; }
+
+      .wrap {
+        // height: 100%;
+        display: flex;
+        // margin: 40px auto;
+        // margin:3vh 10% 0% 10%;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .button {
+        // width: ;
+        // height: 45px;
+        padding:15px 25px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        // text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 800;
+        // color: #000;
+        // background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    
+    
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+    
+        }
+      
+      .button:hover {
+    
+        color: #000;
+        background-color: #fff;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    
+        // background-color: #2EE59D;
+        // box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        // color: #fff;
+        transform: translateY(-7px);
+      }
+    
+      .sec{
+        color: #000;
+        background-color: #fff;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      }
+    
+      .sec:hover{
+        // background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(12, 17, 15, 0.356);
+        // color: #fff;
+        transform: translateY(-0px);
+      }
+    
+    }
+  }
+
+}
+
+
+
+
+// check box
+
+input[type="checkbox"] {
+  
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  
+  + label {
+    
+    position: relative;
+    display: block;
+    padding: 0 0 0 1.75em;
+    margin-bottom: 1em;
+    font-size: 20px;
+    line-height: 1.25;
+    font-family: Gaegu, sans-serif;
+    
+    span {
+      
+      position: absolute;
+      top: 0.15em;
+      left: 0;
+      transition: all 50ms ease-out;
+      display: inline-block;
+      vertical-align: bottom;
+      background: white;
+      border-radius: 50%;
+      border: 0.075em solid black;
+      box-shadow: 
+        0.05em 0.05em rgba(black, 0.1),
+        0.1em 0.1em rgba(black, 0.1);
+      width: 1em;
+      height: 1em;
+      font-size: 1em;
+      cursor: pointer;
+
+      &::after {
+        
+        position: absolute;
+        top: 35%;
+        left: 25%;
+        display: block;
+        transform: rotate(-45deg);
+        border-bottom: 0.075em solid black;
+        border-left: 0.075em solid black;
+        width: 0.4em;
+        height: 0.133em;
+        content: '';
+      }
+
+      &:before {
+        transition: all 50ms ease-out;
+        position: absolute;
+        top: -0.225em;
+        left: -0.075em;
+        z-index: -1;
+        display: block;
+        border-radius: 50%;
+        border: 0.075em solid black;
+        width: 100%;
+        height: 100%;
+        content: '';
+      }
+    }
+    
+    &:active span {
+      box-shadow: inset 0 0 0.25em rgba(black, 0.5);
+    }
+    
+    &.active span {
+      top: 0;
+      background: $active;
+    
+      &::before {
+        top: -0.075em;
+      }
+    }
+  }
+  
+  &:checked + label {
+    span {
+      top: 0;
+      background: $active;
+
+      &::before {
+        top: -0.075em;
+      }
+    }
+    
+    &:not(.active) span {
+      box-shadow: 0 0 rgba(black, 0.2);
+    }
+  }
+  
+  
+  // focus state
+  // removed until I can figure out how to 
+  // only apply when using keyboard
+  &:focus + label {
+    span { box-shadow: inset 0 0 0.25em rgba(black, 0.5); }
+  }
+}
