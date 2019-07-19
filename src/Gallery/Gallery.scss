@@ -1,0 +1,64 @@
+@import "../asserts/include_media.scss";
+
+.gallery_wrapper{
+      span{
+        margin: 30px 0px;
+        display: block;
+        text-align: center;
+        
+        a{
+          text-decoration: none;
+          color:black;
+          font-weight: bolder;
+      }
+      a:hover{
+        // font-size:20px;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.062), 0 1px 2px rgba(0, 0, 0, 0.075);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      }
+      
+    }
+.gallery{
+  
+  grid-gap: 10px;
+  display: grid;
+  width: 80%;
+  margin:0px auto;
+  @include media("<phone",) {
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto;
+  }
+
+  @include media(">=phone", "<tablet") {
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto;          
+
+    
+}
+@include media(">=tablet", "<desktop") {
+  
+  grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+}
+@include media(">=desktop",) {
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+}
+
+img{
+  width: inherit;
+  align-self: center;
+  margin:auto auto;
+  
+}
+.loading{
+  background-color: rgb(78, 78, 78);
+  height:50px;
+  width:50px;
+  border-radius: 25px;
+  fill: currentColor;
+}
+
+
+}
+}

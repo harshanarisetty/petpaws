@@ -1,7 +1,4 @@
 @import "../asserts/include_media.scss";
-$breakpoints: (phone: 640px, 
-               tablet: 768px, 
-               desktop: 1024px) !default;
 .outerbox:hover{
   transform: translateY(-3px);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -9,6 +6,7 @@ $breakpoints: (phone: 640px,
   
 }
 .outerbox{
+  
   background-color: white;
   position: relative;
   // background-color: rgb(243, 242, 240);
@@ -41,11 +39,23 @@ $breakpoints: (phone: 640px,
     font-size: 1.5em;
     text-align: center;
   }
-
+  .comming-soon{
+    text-align: center;
+    margin:50px 0px;
+    font-size:20px;
+    opacity: 0.5;
+    
+  }
   .description{
-    line-height: 30px;
+    font-size:14px;
     text-indent: 2em;
     text-align: justify;
+    display: block; /* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  // max-height: 5em;
+  line-height: 1.8em;
   }
   .calltoaction{
     .wrap {

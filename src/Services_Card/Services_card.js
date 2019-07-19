@@ -3,27 +3,31 @@ import "./Services_card.scss";
 import Logo from "../asserts/logo.png";
 export default class Services_Card extends Component {
   render() {
-    let percent = 20;
     return (
-      <div>
-        <div className="outerbox">
-          {/* <div className="offer">
+      <div className="outerbox">
+        {/* <div className="offer">
             <span>{this.props.data.offer}% off</span>
           </div> */}
-          <br />
-          <img className="icon" alt="sercice-icon" src={this.props.data.logo} />
-          <div className="title">{this.props.data.title}</div>
-          <div className="description">
-            <p>{this.props.data.description}</p>
+        <br />
+        <img className="icon" alt="sercice-icon" src={this.props.data.logo} />
+        <div className="title">{this.props.data.title}</div>
+
+        {this.props.data.available ? (
+          <div>
+            <div className="description">
+              <p>{this.props.data.description}</p>
+            </div>
+            <div className="calltoaction">
+              <span className="wrap">
+                <button className="button sec">
+                  {this.props.data.calltoaction}
+                </button>
+              </span>
+            </div>
           </div>
-          <div className="calltoaction">
-            <span className="wrap">
-              <button className="button sec">
-                {this.props.data.calltoaction}
-              </button>
-            </span>
-          </div>
-        </div>
+        ) : (
+          <div className="comming-soon">Comming Soon</div>
+        )}
       </div>
     );
   }

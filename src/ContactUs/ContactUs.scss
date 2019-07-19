@@ -4,16 +4,28 @@
 $active: turquoise;
 
 .wrapper{
+  
   widows: 100%;
+  
   .contact-container{
+    .bunny-stick{
+      transform: scaleX(-1);
+      position: absolute;
+      margin-top:-160px; 
+      width: 200px;
+      
+    }
     display: grid;
     overflow: hidden;
-    background-color: rgb(232,232,232);
+    background-color: rgba(230, 223, 223, 0.336);
     @include media("<phone") {
                 
       grid-template-columns: 1fr;
       grid-template-rows: 2;
+      grid-template-areas: "left" 
+                        "right";
       .left{
+        
         img{
           width:90vw;
           
@@ -23,10 +35,12 @@ $active: turquoise;
       }
       
   }
-    @include media(">phone", "<tablet") {
+    @include media(">=phone", "<tablet") {
                 
       grid-template-columns: 1fr;
       grid-template-rows: 2;
+      grid-template-areas: "left" 
+      "right";
       .left{
         img{
           width:90vw;
@@ -36,10 +50,11 @@ $active: turquoise;
       }
       
   }
-  @include media(">tablet", "<desktop") {
+  @include media(">=tablet", "<desktop") {
     
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
+    grid-template-areas: "left right";
     .left{
       img{
         width:40vw;
@@ -50,6 +65,7 @@ $active: turquoise;
   @include media(">=desktop",) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
+    grid-template-areas: "left right";
     .left{
       img{
         width:40vw;
@@ -58,17 +74,62 @@ $active: turquoise;
     }
   }
     
-   
+   .left{
+    grid-area: left;
+     position: relative;
+    .contactinfo{
+      padding: 5vh 5vw;
+      .sub-title{
+        display: block;
+        font-weight: bolder;
+        margin: 10px 0px;
+        font-size:24px;
+      }
+      .sub-title-phone{
+        font-weight: bolder;
+        font-size:16px;
+      }
+      a{
+        text-decoration: none;
+        color:black;
+      }
+      .row{
+        display: grid;
+        grid-template-columns: 20px auto;
+        grid-template-rows: 1;
+        grid-gap: 10px;
+        align-self: center;
+      }
+      .working-hours{
+        .days,.hours{
+          margin:10px 0px;
+        }
+        .row{
+          display: grid;
+          grid-template-columns: 100px auto;
+          grid-template-rows: 1;
+          grid-gap: 10px;
+          // align-self: center;
+          margin:20px 0px;
+        }
+      }
+    }
+   }
 
    
     .right{
-      
-      align-self: center;
+      grid-area: right;
+      padding: 50px;
+      // align-self: center;
+      label{
+        margin: 0px 20px;
+      }
       input,textarea{
+        
         padding:10px;
         border-radius: 10px;
         border:none;
-        margin:10px 0px;
+        margin:15px;
         width: 80%;
         
         border:none;
@@ -78,31 +139,26 @@ $active: turquoise;
       }
       
   
-     input:focus { outline:none; }
+      textarea:focus,input:focus { 
+        box-shadow: 0 4px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transform: translateY(-3px) ;
+        outline: none;
+    }
 
       .wrap {
-        // height: 100%;
         display: flex;
-        // margin: 40px auto;
-        // margin:3vh 10% 0% 10%;
         align-items: center;
         justify-content: center;
       }
       
       .button {
-        // width: ;
-        // height: 45px;
         padding:15px 25px;
         font-family: 'Roboto', sans-serif;
         font-size: 12px;
-        // text-transform: uppercase;
         letter-spacing: 2.5px;
         font-weight: 800;
-        // color: #000;
-        // background-color: #fff;
         border: none;
         border-radius: 5px;
-        // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease 0s;
         cursor: pointer;
         outline: none;

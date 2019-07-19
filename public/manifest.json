@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PetPaws",
+  "name": "PetPaws",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://rawcdn.githack.com/harshanarisetty/petpaws/a6fb2ac743ab896f4643e630d211e4041b5a4dd8/src/asserts/logo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
