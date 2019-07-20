@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ContactUs.scss";
+import BunnyImg from '../asserts/bunny.svg';
 import MaterialIcon from "material-icons-react";
 export default class ContatUs extends Component {
   render() {
@@ -8,7 +9,7 @@ export default class ContatUs extends Component {
         <div className="contact-container">
           <img
             className="bunny-stick"
-            src="https://svgshare.com/i/EBn.svg"
+            src={BunnyImg}
             alt="bunny"
           />
           <div className="left">
