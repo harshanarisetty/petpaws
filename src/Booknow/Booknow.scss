@@ -1,0 +1,136 @@
+@import "../asserts/include_media.scss";
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}  
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+.booknow-wrapper{
+  -webkit-animation: fadeIn 0.4s;
+    animation: fadeIn 0.4s;
+  background: rgba(46, 229, 156, 0.856);
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+  display:flex;
+  position: fixed;
+  
+  // background-color: rgba(255, 255, 255, 0.637);
+  .container::-webkit-scrollbar { 
+    display: none; 
+  }
+  .container {
+    
+    margin:auto auto;
+  
+   overflow: scroll;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:"left right";
+
+
+    @include media("<phone") {
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas:"left""right";
+      #topbannerclose{
+        right:0;
+       }
+    }
+  
+    @include media(">=phone", "<=tablet") {
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas:"left""right";
+      #topbannerclose{
+        right:0;
+       }
+  }
+  @include media(">tablet") {
+    width: 90vw;
+    height: 90vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:"left right";
+  
+  }
+
+    .left{
+      grid-area: left;
+      align-self: center;
+      img{
+        
+        width:100%;
+        height: auto;
+        }
+    }
+    .right{
+      grid-area: right;
+      
+    }
+
+    #topbannerclose{
+      position: absolute;
+      padding: 30px;
+     
+      cursor: pointer;
+    }
+
+    .contactinfo{
+      padding: 5vh 5vw;
+      .sub-title{
+        display: block;
+        font-weight: bolder;
+        margin: 10px 0px;
+        font-size:24px;
+      }
+      .sub-title-phone{
+        font-weight: bolder;
+        font-size:16px;
+      }
+      a{
+        text-decoration: none;
+        color:black;
+      }
+      .row{
+        display: grid;
+        grid-template-columns: 20px auto;
+        grid-template-rows: 1;
+        grid-gap: 10px;
+        align-self: center;
+      }
+      .working-hours{
+        .days,.hours{
+          margin:10px 0px;
+        }
+        .row{
+          display: grid;
+          grid-template-columns: 100px auto;
+          grid-template-rows: 1;
+          grid-gap: 10px;
+          // align-self: center;
+          margin:20px 0px;
+        }
+      }
+    }
+    // @include media(">=tablet", "<desktop") {
+    //   padding: 20vh 20vw;
+
+     
+    // }
+    // @include media(">=desktop",) {
+    //   margin: 10vh 10vw;
+
+    // }
+  }
+ 
+}

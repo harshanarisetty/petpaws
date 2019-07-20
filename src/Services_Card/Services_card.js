@@ -26,7 +26,7 @@ export default class Services_Card extends Component {
             </div>
           </div>
         ) : (
-          <div className="comming-soon">Comming Soon</div>
+          <div className="comming-soon">{this.props.data.description}</div>
         )}
       </div>
     );

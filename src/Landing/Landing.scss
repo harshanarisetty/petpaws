@@ -4,10 +4,7 @@
     padding: 0px;
     width: 100%;
     height:100%;
-      
-
     
-
 }
 /* Nav CSS */
 
@@ -104,9 +101,14 @@
                 ul{
                     list-style: none;
                     li > .active {
-                        border-bottom: 1px solid #2EE59D;
+                        border-bottom: 2px solid #2EE59D;
+                    }
+                    li:hover{
+                        transform: translateY(-2);
                     }
                     li{
+                    
+                        cursor: pointer;
                         display: inline;
                         margin:0px 10px;
 
@@ -187,6 +189,10 @@
             text-align: center;
 
             li{
+                Link:hover{
+                    transform: translateY(-2);
+                }
+                cursor: pointer;
                 padding:10px 0px;
                 .button {
                     padding:10px 20px;
@@ -437,7 +443,58 @@
     width: 100%;
     height: 100%;
     
+.about-grid{
 
+    display: grid;
+    margin:40px auto;
+@include media( "<=tablet") {
+    .dogSVG{
+        display: block;
+    }
+  }
+  @include media(">tablet") {
+    .dogSVG{
+        background-size: 100px 82px;
+        width:300px;
+        display: flex;
+        float: left;
+    }
+  }
+
+    @include media("<=tablet") {
+        width: 90vw;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:"dog""content";
+        .dog_container{
+           width: 300px;
+           height:300px;
+           margin: auto auto;
+        }
+    }
+    @include media(">tablet") {
+        width: 90vw;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        grid-template-areas:"dog content";
+    }
+    .dog{
+        grid-area:dog;
+        align-self: center;
+        filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    }
+    .dog_container{
+        
+        height: 300px;
+        background-color: white;
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+    }
+  
+    .content{
+        grid-area:content;
+    }
+}
     
 }
 

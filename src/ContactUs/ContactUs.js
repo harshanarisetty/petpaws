@@ -21,7 +21,7 @@ export default class ContatUs extends Component {
                 <span className="sub-title-phone">
                   <a href="tel:9176156928"> 9176 156 928 </a>
                 </span>{" "}
-                with any questions you have or to book your prt.
+                with any questions you have or to book your pet.
               </span>
               <br />
               <br />
@@ -41,10 +41,12 @@ export default class ContatUs extends Component {
                   Tamil Nadu 600106, {"  "} India
                 </a>
               </div>
+              <br />
               <div className="row">
                 <MaterialIcon icon="local_phone" />
                 <a href="tel:9176156928">9176156928</a>
               </div>
+              <br />
               <div className="row">
                 <MaterialIcon icon="email" />
                 <a

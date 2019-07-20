@@ -118,6 +118,9 @@ $active: turquoise;
 
    
     .right{
+      #press-me{
+        display: none;
+      }
       grid-area: right;
       padding: 50px;
       // align-self: center;
