@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Services_card.scss";
-import Logo from "../asserts/logo.png";
 export default class Services_Card extends Component {
   render() {
     return (
@@ -9,7 +8,7 @@ export default class Services_Card extends Component {
             <span>{this.props.data.offer}% off</span>
           </div> */}
         <br />
-        <img className="icon" alt="sercice-icon" src={this.props.data.logo} />
+        {this.props.data.logo}
         <div className="title">{this.props.data.title}</div>
 
         {this.props.data.available ? (

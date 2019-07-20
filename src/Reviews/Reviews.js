@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Arrrow from '../asserts/arrow.svg';
 import "./Reviews.scss";
 export default class Reviews extends Component {
   constructor() {
@@ -37,7 +37,7 @@ export default class Reviews extends Component {
               }
             }}
           >
-            <img src="https://image.flaticon.com/icons/svg/52/52284.svg" />
+            <img src={Arrrow} alt='arrow' />
           </div>
 
           <div className="review-block">
@@ -61,7 +61,7 @@ export default class Reviews extends Component {
             }}
             id="next"
           >
-            <img src="https://image.flaticon.com/icons/svg/52/52284.svg" />
+            <img src={Arrrow} alt='arrow' />
           </div>
         </div>
       </div>

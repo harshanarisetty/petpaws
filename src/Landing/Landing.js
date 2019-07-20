@@ -3,6 +3,11 @@ import MaterialIcon from "material-icons-react";
 import { Link } from "react-scroll";
 import "./Landing.scss";
 import Logo from "../asserts/logo.png";
+import GroomingImg from '../asserts/grooming.svg';
+import BoardingImg from '../asserts/boarding.svg';
+import DayCareImg from '../asserts/daycare.svg';
+import LandingImg from '../asserts/landing.svg';
+
 import ServiceCard from "../Services_Card/Services_card";
 import ReviewBlock from "../Reviews/Reviews";
 import ContactUs from "../ContactUs/ContactUs";
@@ -285,7 +290,7 @@ export default class Landing extends Component {
       {
         offer: 20,
         title: "Boarding",
-        logo: "https://image.flaticon.com/icons/svg/1499/1499532.svg",
+        logo: <img src={BoardingImg} className="icon" alt="sercice-icon"  />,
         description: ` Pet paws is devoted to providing a safe, secure and happy home for your pets, in Chennai, while you relax and take a short/long break. Our boarding locations are tailored to meet your pet's needs. Pet Paws promises to create a memorable stay for your pet. We at Pet paws also help your pet to make new friends, so they can hang out altogether and enjoy their vacation.`,
         images: [{ Logo }, { Logo }, { Logo }],
         calltoaction: "Learn More",
@@ -295,7 +300,7 @@ export default class Landing extends Component {
       {
         offer: 20,
         title: "Day Care",
-        logo: "https://image.flaticon.com/icons/svg/1499/1499539.svg",
+        logo:<img src={DayCareImg} className="icon" alt="sercice-icon"  />,
         description: ` At Pet paws your pet's food is just the same as at home. Food is prepared fresh and with great care to make sure that it tastes and remains the same as what the pet is used to eating at home. All you need to do is to leave instructions with regard to your pet's eating habit and we would make sure that when it comes to food your pet never has to miss home.`,
         images: [{ Logo }, { Logo }, { Logo }],
         calltoaction: "Learn More",
@@ -304,7 +309,7 @@ export default class Landing extends Component {
       {
         offer: 20,
         title: "Grooming",
-        logo: "https://image.flaticon.com/icons/svg/1499/1499518.svg",
+        logo: <img src={GroomingImg} className="icon" alt="sercice-icon"  />,
         description: ` Coming Soon`,
         images: [{ Logo }, { Logo }, { Logo }],
         calltoaction: "Learn More",
@@ -379,7 +384,7 @@ export default class Landing extends Component {
         <div className="spacer">&nbsp;</div>
         <div id="head" className="head">
           <div className="right">
-            <img src="https://svgshare.com/i/E6o.svg" alt="LandingImg" />
+            <img src={LandingImg} alt="LandingImg" />
           </div>
           <div className="left">
             <div className="main">

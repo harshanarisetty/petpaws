@@ -13,6 +13,7 @@
 
 #firebaseConfig
 /src/firebase.js
+database.rules.json
 
 # misc
 .DS_Store
