@@ -1,6 +1,6 @@
 import app from 'firebase/app';
-import 'firebase/auth';
 import 'firebase/database';
+import 'firebase/auth';
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -9,15 +9,24 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_APP_ID
-};
+  };
+
+  
+
+const Firebase = app.initializeApp(firebaseConfig);
 
 
-class Firebase {
-  constructor() {
-    app.initializeApp(firebaseConfig);
+export default Firebase;
 
+
+
+
+export class FirebaseClass {
+  constructor(){
+    
     this.auth = app.auth();
   }
+  
 
   // *** Auth API ***
 
@@ -33,6 +42,4 @@ class Firebase {
 
   doPasswordUpdate = password =>
     this.auth.currentUser.updatePassword(password);
-}
-
-export default Firebase;
+};

@@ -5,8 +5,7 @@ import BunnyImg from '../asserts/bunny.png';
 import SuccessDog from '../asserts/success.png';
 import MaterialIcon from "material-icons-react";
 import firebase from 'firebase/app';
-import 'firebase/database';
-import firebaseConfig from '../Firebase/firebase';
+import Firebase from '../Firebase/firebase';
 export default class ContatUs extends Component {
   constructor(){
     super();
@@ -50,7 +49,7 @@ export default class ContatUs extends Component {
       phone:this.state.phone,
       timestamp:firebase.database.ServerValue.TIMESTAMP
       }  
-      firebaseConfig.database().ref('Email List').push(updates_data)
+      Firebase.database().ref('Email List').push(updates_data)
       .then(res => {
         console.log("Successfully added to Email list");
         console.log(res.data);
@@ -61,7 +60,7 @@ export default class ContatUs extends Component {
     }
 
     
-    firebaseConfig.database().ref('ContactUS').push(data)
+    Firebase.database().ref('ContactUS').push(data)
     .then( res => {
       console.log('Query received Successfully');
         this.clearstate();
