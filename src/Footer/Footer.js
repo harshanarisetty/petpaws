@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MaterialIcon from "material-icons-react";
 import "./Footer.scss";
 import Logo from "../asserts/logo.png";
+import LazyLoad from "react-lazyload";
 export default class Footer extends Component {
   render() {
     return (
@@ -56,11 +57,11 @@ export default class Footer extends Component {
             </div>
           </div>
           <div className="Map">
+          <LazyLoad key='map_foot' id='map_foot' height={200} once>
             <iframe
               title="location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.435858714779!2d80.20438025119174!3d13.071540190745175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a3ac2814d7%3A0x70270bf794a85c84!2sJai+Nagar+2nd+Main+Rd%2C+Jai+Nagar%2C+Arumbakkam%2C+Chennai%2C+Tamil+Nadu+600106%2C+India!5e0!3m2!1sen!2sus!4v1563473190274!5m2!1sen!2sus"
-              frameborder="0"
-            />
+            /></LazyLoad>
           </div>
         </div>
       </div>

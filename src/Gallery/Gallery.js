@@ -8,57 +8,79 @@ export default class Gallery extends Component {
     this.state = {
       photos: [
         <img
+          id='1'
+          key='1'
           className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
+        id='2'
+        key='2'
           className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='3'
+        key='3'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='4'
+        key='4'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='5'
+        key='5'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='6'
+        key='6'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='7'
+        key='7'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='8'
+        key='8'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='9'
+        key='9'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='10'
+        key='10'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />,
         <img
-          className="loading"
+        id='11'
+        key='11'
+        className="loading"
           src="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
           alt="placeholder>"
         />
@@ -74,9 +96,10 @@ export default class Gallery extends Component {
           element => {
             let s = "lazy" + element.node.id;
             images.push(
-              <LazyLoad id={s} height={200} once>
+              <LazyLoad key={element.node.id} id={s} height={200} once>
                 <img
                   id={element.node.id}
+                  
                   src={element.node.display_url}
                   alt="post"
                 />

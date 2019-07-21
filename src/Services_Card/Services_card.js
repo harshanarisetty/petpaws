@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Services_card.scss";
+import LazyLoad from "react-lazyload";
 export default class Services_Card extends Component {
   render() {
     return (
@@ -8,7 +9,7 @@ export default class Services_Card extends Component {
             <span>{this.props.data.offer}% off</span>
           </div> */}
         <br />
-        {this.props.data.logo}
+        <LazyLoad key='bunny' id='bunny' height={300} once>{this.props.data.logo}</LazyLoad>
         <div className="title">{this.props.data.title}</div>
 
         {this.props.data.available ? (

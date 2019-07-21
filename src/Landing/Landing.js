@@ -7,7 +7,6 @@ import GroomingImg from '../asserts/grooming.svg';
 import BoardingImg from '../asserts/boarding.svg';
 import DayCareImg from '../asserts/daycare.svg';
 import LandingImg from '../asserts/landing.svg';
-
 import ServiceCard from "../Services_Card/Services_card";
 import ReviewBlock from "../Reviews/Reviews";
 import ContactUs from "../ContactUs/ContactUs";
@@ -409,7 +408,7 @@ export default class Landing extends Component {
           <div className="horizaontal-line" />
           <div className="about-grid">
             <div className="dog">
-              <div class="dog_container ">
+              <div className="dog_container ">
                 <svg className="dogSVG" viewBox="100 100 400 400">
                   <g id="dogGroup">
                     <rect
@@ -484,14 +483,14 @@ export default class Landing extends Component {
                         id="noseShine"
                         fill="none"
                         stroke="#AAABAF"
-                        stroke-width="4"
-                        stroke-linecap="round"
+                        strokeWidth="4"
+                        strokeLinecap="round"
                         d="
     M282.1,337.7L282.1,337.7c0-4.2,3.4-7.6,7.6-7.6h20.4c4.2,0,7.6,3.4,7.6,7.6l0,0"
                       />
                     </g>
 
-                    <g id="browGroup" stroke="#443F43" stroke-linecap="round">
+                    <g id="browGroup" stroke="#443F43" strokeLinecap="round">
                       <line
                         id="browL"
                         x1="250"
@@ -499,8 +498,8 @@ export default class Landing extends Component {
                         x2="290"
                         y2="253"
                         fill="none"
-                        stroke-miterlimit="10"
-                        stroke-width="7"
+                        strokeMiterlimit="10"
+                        strokeWidth="7"
                       />
                       <line
                         id="browR"
@@ -509,15 +508,15 @@ export default class Landing extends Component {
                         x2="349"
                         y2="253"
                         fill="none"
-                        stroke-miterlimit="10"
-                        stroke-width="7"
+                        strokeMiterlimit="10"
+                        strokeWidth="7"
                       />
                     </g>
                     <g id="eyeGroup" fill="#443F43">
                       <g id="eyeSpinL">
                         <ellipse
                           id="eyeL"
-                          class="eye"
+                          className="eye"
                           cx="270"
                           cy="285"
                           rx="7"
@@ -527,7 +526,7 @@ export default class Landing extends Component {
                       <g id="eyeSpinR">
                         <ellipse
                           id="eyeR"
-                          class="eye"
+                          className="eye"
                           cx="329"
                           cy="285"
                           rx="7"
