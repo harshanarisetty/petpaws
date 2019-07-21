@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+.wrapper_404{
+    width:100vw;
+    height: 100vh; 
+   top:0;
+   left:0;
+   right:0;
+   bottom: 0;
+   display: grid;
+   grid-template-columns: 1fr;
+   background-color: rgba(46, 229, 156, 0.856);
+   grid-template-rows: afr;
+   text-align: center;
+    .container{
+        background-color:white;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        padding: 50px 15vw;
+        border-radius: 10px;
+        align-self: center;
+
+        margin: auto auto;
+
+    img{
+        
+        max-width: 350px;
+        width:70vw;
+    }
+    
+    .Messange{
+        .text{
+            font-family: 'Modak', cursive;
+            color: rgb(105, 29, 2);
+            font-size: 5vh;
+        }
+        .wrap {
+            
+            display: block;
+            margin: 40px 0px;
+          }
+
+          .button {
+            text-decoration: none;
+            padding:10px 20px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            letter-spacing: 2.5px;
+            font-weight: 800;
+            border: none;
+            border-radius: 45px;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+        
+        
+            background-color: #2EE59D;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+        
+            }
+          
+          .button:hover {
+        
+            color: #000;
+            background-color: #fff;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        
+            transform: translateY(-7px);
+          }
+        
+        }
+
+}
+}

@@ -18,7 +18,7 @@
     }
     display: grid;
     
-    @include media("<phone",) {
+    @include media("<phone") {
       grid-template-columns: repeat(1,1fr);
       grid-template-rows: auto;
 
@@ -34,7 +34,7 @@
     grid-template-columns: repeat(2,1fr);
       grid-template-rows: auto;
   }
-  @include media(">=desktop",) {
+  @include media(">=desktop") {
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
   }

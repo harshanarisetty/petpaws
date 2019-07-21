@@ -6,7 +6,7 @@ import SuccessDog from '../asserts/success.png';
 import MaterialIcon from "material-icons-react";
 import firebase from 'firebase/app';
 import 'firebase/database';
-import firebaseConfig from '../firebase';
+import firebaseConfig from '../Firebase/firebase';
 export default class ContatUs extends Component {
   constructor(){
     super();

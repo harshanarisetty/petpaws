@@ -20,7 +20,7 @@ export default class BookNow extends Component {
           </div>
           <div className="contactinfo right">
             <span className="sub-title">
-              Sorry!, right now we are taking bookings only by phone or email
+              Right now we are taking bookings only by phone or email
             </span>
             <br />
             <span className="description">
