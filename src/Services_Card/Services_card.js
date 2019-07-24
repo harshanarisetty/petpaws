@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Services_card.scss";
+import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
 export default class Services_Card extends Component {
   render() {
@@ -19,9 +20,10 @@ export default class Services_Card extends Component {
             </div>
             <div className="calltoaction">
               <span className="wrap">
+              <Link to={'/services/'+this.props.data.title}>
                 <button className="button sec">
                   {this.props.data.calltoaction}
-                </button>
+                </button></Link>
               </span>
             </div>
           </div>

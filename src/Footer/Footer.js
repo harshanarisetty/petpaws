@@ -44,7 +44,7 @@ export default class Footer extends Component {
             </div>
             <div className="row">
               <MaterialIcon color="white" icon="local_phone" />
-              <a href="tel:9176156928">9176156928</a>
+              <a href="tel:091761 63928">091761 63928</a>
             </div>
             <div className="row">
               <MaterialIcon color="white" icon="email" />

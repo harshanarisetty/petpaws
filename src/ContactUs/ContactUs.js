@@ -123,7 +123,7 @@ export default class ContatUs extends Component {
               <br />
               <div className="row">
                 <MaterialIcon icon="local_phone" />
-                <a href="tel:9176156928">9176156928</a>
+                <a href="tel:09176163928">091761 63928</a>
               </div>
               <br />
               <div className="row">

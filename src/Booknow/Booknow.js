@@ -27,7 +27,7 @@ export default class BookNow extends Component {
               {" "}
               Call us today at{" "}
               <span className="sub-title-phone">
-                <a href="tel:9176156928"> 9176 156 928 </a>
+                <a href="tel:091761 63928">091761 63928</a>
               </span>{" "}
               with any questions you have or to book your reservation.
             </span>
@@ -53,7 +53,7 @@ export default class BookNow extends Component {
 
             <div className="row">
               <MaterialIcon icon="local_phone" />
-              <a href="tel:9176156928">9176156928</a>
+              <a href="tel:091761 63928">091761 63928</a>
             </div>
             <br />
 

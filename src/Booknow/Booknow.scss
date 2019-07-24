@@ -45,14 +45,19 @@
        }
     }
   
-    @include media(">=phone", "<=tablet") {
+    @include media(">0", "<=tablet") {
       width: 100vw;
       height: 100vh;
+      // margin-bottom: 250px;
       grid-template-columns: auto;
       grid-template-rows: auto;
       grid-template-areas:"left""right";
       #topbannerclose{
         right:0;
+       }
+
+       .right{
+         margin-bottom: 50px;
        }
   }
   @include media(">tablet") {
