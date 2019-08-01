@@ -12,7 +12,7 @@ import Gallery from "../Gallery/Gallery";
 import Footer from "../Footer/Footer";
 import BookNow from "../Booknow/Booknow";
 import DogAnimation from '../DogAnimation/DogAnimation';
-
+import axios from "axios";
 import NavBar from '../NavBar/NavBar';
 export default class Landing extends Component {
   constructor(props) {
@@ -21,12 +21,32 @@ export default class Landing extends Component {
       toggleSidenav: false,
       about_read_state: false,
       topbanner: true,
-      booknow: false
+      booknow: false,
+      placedatacall:false,
+      placedata:''
+
     };
     this.booknow_toggle = this.booknow_toggle.bind(this);
   }
+
+  componentWillMount(){
+    const places_url = "https://maps.googleapis.com/maps/api/place/details/json?placeid="+process.env.REACT_APP_PLACES_ID +"&fields=photo,reviews&key="+process.env.REACT_APP_PLACES_API;
+    axios
+      .get(places_url)
+      .then(res => {
+          this.setState({ placedata : res.data.result});
+      })
+      .then(res => {
+        this.setState({ placedatacall : true});
+    })
+      .catch(err =>{
+        console.log(err);
+      })
+    
+  }
   
   booknow_toggle() {
+    
     this.setState({ booknow: !this.state.booknow });
   }
 
@@ -192,12 +212,12 @@ export default class Landing extends Component {
               consequat,
             </p>
           </div>
-          <ReviewBlock />
+        {this.state.placedatacall && <ReviewBlock reviews={this.state.placedata.reviews}/>}
         </div>
         <div id="gallery" className="Gallery">
           <div className="section-title">Gallery</div>
           <div className="horizaontal-line" />
-          <Gallery />
+          {this.state.placedatacall && <Gallery photos={this.state.placedata.photos}/>}
         </div>
         <div id="contactus" className="Contact">
           <div className="section-title">Contact Us</div>

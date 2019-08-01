@@ -1,4 +1,6 @@
 
+@import "../asserts/include_media.scss";
+
 .wrapper{
   
   
@@ -15,19 +17,39 @@
     
   }
   .review-block{
-    .horizaontal-line{
-      height: 2px;
-      background-color: rgb(177, 177, 177);
-      width: 40%;
-      display: block;
-      position: relative;
-      opacity: 0.9;
-      // margin-left: auto;
+    display: grid;
+    grid-gap: 40px;
+    @include media(">tablet") {
+    grid-template-areas: "left review";
+    }
+    @include media("<=tablet") {
+      grid-template-areas: "left"
+                            "review";  
+  
+  }
+    a{
+    text-decoration: none;
+    color: black;
+    }
+    .left{
+      margin:auto auto; 
+      grid-area: left;
+      justify-content: center;
+      align-self: center; 
+      width: 150px;
+      .reviewer-logo{
+        width:60px;
+        height: 60px;
+        border-radius: 30px;  
+      }
+    }
+    .review{
       
-    
-      // margin-right: auto;
-      // margin-bottom: 20px;
-      margin:20px auto;
+      grid-area: review;
+      justify-content: center;
+      align-self: center; 
+      font-size: 14px;
+      text-align: left; 
     }
     // background-color: rgb(242, 247, 242);
     text-align: center;

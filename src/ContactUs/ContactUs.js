@@ -52,7 +52,6 @@ export default class ContatUs extends Component {
       Firebase.database().ref('Email List').push(updates_data)
       .then(res => {
         console.log("Successfully added to Email list");
-        console.log(res.data);
       })
       .catch(err => {
         console.log(err);

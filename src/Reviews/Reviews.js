@@ -1,25 +1,21 @@
 import React, { Component } from "react";
 import Arrrow from '../asserts/arrow.svg';
 import "./Reviews.scss";
+import StarRatingComponent from 'react-star-rating-component';
 export default class Reviews extends Component {
   constructor() {
+    
     super();
+    
     this.state = {
-      reviews: [
-        {
-          review:
-            " Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,",
-          name: "Harsha Narisetty"
-        },
-        {
-          review:
-            "Hendrerit in vulputate velit esse molestie consequat duis autem vel eum iriure dolor.",
-          name: "Narisetty Harsha"
-        }
-      ],
-      length: 1,
+      reviews: {},
+      length: 4,
       initial: 0
     };
+  }
+  componentWillMount(){
+    this.setState({reviews : this.props.reviews});
+
   }
 
   render() {
@@ -41,13 +37,26 @@ export default class Reviews extends Component {
           </div>
 
           <div className="review-block">
-            <div className="review">
-              {this.state.reviews[this.state.initial].review}
+            <a href={this.state.reviews[this.state.initial].author_url}><div className='left'>
+              <img className='reviewer-logo' src={this.state.reviews[this.state.initial].profile_photo_url} alt='reviewer-pic'></img>
+              <p className='reviewer'>{this.state.reviews[this.state.initial].author_name}</p>
+            <StarRatingComponent
+              name="rate1"  
+              starCount={5}
+              value={this.state.reviews[this.state.initial].rating}
+              editing={false}
+            />
             </div>
-            <div className="horizaontal-line" />
+            </a>
+          
+            <div className="review">
+              {this.state.reviews[this.state.initial].text}
+            </div>
+            {/* <div className="horizaontal-line" />
             <div className="reviewer">
               {this.state.reviews[this.state.initial].name}
-            </div>
+            </div> */}
+          
           </div>
 
           <div
