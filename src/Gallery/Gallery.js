@@ -9,14 +9,15 @@ export default class Gallery extends Component {
     };
   }
   componentDidMount() {
-    console.log(this.props.photos);
+    // console.log(this.props.photos);
     let photos_arr=[];    
     for(var photo in this.props.photos){
       photos_arr.push(
       <LazyLoad key={'lazy'+photo} id={photo} height={200} once>
         <img
           id={'img'+photo}
-          src={'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=+'+ this.props.photos[photo].photo_reference+'+&key=+'+process.env.REACT_APP_PLACES_API}
+          
+          src={this.props.photos[photo].getUrl()}
           alt="post"
         />
       </LazyLoad>)

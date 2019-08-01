@@ -12,8 +12,9 @@ import Gallery from "../Gallery/Gallery";
 import Footer from "../Footer/Footer";
 import BookNow from "../Booknow/Booknow";
 import DogAnimation from '../DogAnimation/DogAnimation';
-import axios from "axios";
 import NavBar from '../NavBar/NavBar';
+
+
 export default class Landing extends Component {
   constructor(props) {
     super(props);
@@ -22,31 +23,53 @@ export default class Landing extends Component {
       about_read_state: false,
       topbanner: true,
       booknow: false,
-      placedatacall:false,
-      placedata:''
+      placedatacall: false,
+      photos: [],
+      reviews:[]
 
     };
     this.booknow_toggle = this.booknow_toggle.bind(this);
+    this.google_placecaller = this.google_placecaller.bind(this);
   }
 
-  componentWillMount(){
-    const places_url = "https://maps.googleapis.com/maps/api/place/details/json?placeid="+process.env.REACT_APP_PLACES_ID +"&fields=photo,reviews&key="+process.env.REACT_APP_PLACES_API;
-    axios
-      .get(places_url)
-      .then(res => {
-          this.setState({ placedata : res.data.result});
-      })
-      .then(res => {
-        this.setState({ placedatacall : true});
-    })
-      .catch(err =>{
-        console.log(err);
-      })
-    
+  componentWillMount() {
+    let s =document.createElement('script')
+    s.src="https://maps.googleapis.com/maps/api/js?key="+process.env.REACT_APP_PLACES_API+"&libraries=places"
+    document.body.appendChild(s);
+    s.addEventListener('load',() =>{
+    this.google_placecaller();
+  }) 
   }
-  
+
+  google_placecaller = () => {
+    const google = window.google;
+    var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 13.0702813, lng: 80.2064512 },
+      zoom: 15
+    });
+
+    var request = {
+      placeId: process.env.REACT_APP_PLACES_ID,
+      fields: ['photo', 'reviews']
+    };
+
+    var service = new google.maps.places.PlacesService(map);
+    service.getDetails(request, (res,status) => {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        console.log(res);
+        this.setState({ photos: res.photos });
+        this.setState({ reviews: res.reviews });
+        this.setState({ placedatacall: true });
+      }
+      else{
+        console.log('Error while retreving photos and reviews');
+      }
+    });
+  }
+
   booknow_toggle() {
-    
+
     this.setState({ booknow: !this.state.booknow });
   }
 
@@ -86,11 +109,12 @@ export default class Landing extends Component {
 
     return (
       <div className="landing">
+        <meta name="google-site-verification" content="V6-8gt-DJnGQQs6VR_8eKWxc2_2USo8Q_qPeqH4vREI" />
         {this.state.booknow && <BookNow booknowtoggle={this.booknow_toggle} />}
-        <NavBar booknowtoggle={this.booknow_toggle}/>
+        <NavBar booknowtoggle={this.booknow_toggle} />
         <div className="spacer">&nbsp;</div>
         <div id="head" className="head">
-          
+
           <div className="left">
             <div className="main">
               Finally a way to keep your buddy in
@@ -212,12 +236,12 @@ export default class Landing extends Component {
               consequat,
             </p>
           </div>
-        {this.state.placedatacall && <ReviewBlock reviews={this.state.placedata.reviews}/>}
+          {this.state.placedatacall && <ReviewBlock reviews={this.state.reviews} />}
         </div>
         <div id="gallery" className="Gallery">
           <div className="section-title">Gallery</div>
           <div className="horizaontal-line" />
-          {this.state.placedatacall && <Gallery photos={this.state.placedata.photos}/>}
+          {this.state.placedatacall && <Gallery photos={this.state.photos} />}
         </div>
         <div id="contactus" className="Contact">
           <div className="section-title">Contact Us</div>
@@ -225,6 +249,7 @@ export default class Landing extends Component {
           <ContactUs />
         </div>
         <Footer />
+        <div id='map'></div>
       </div>
     );
   }

@@ -6,6 +6,7 @@ import Error404 from './404/404';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import * as serviceWorker from "./serviceWorker";
 import "./index.scss";
+
 // import Firebase, { FirebaseContext } from './Firebase';
 ReactDOM.render((
     // <FirebaseContext.Provider value={new Firebase()}>
