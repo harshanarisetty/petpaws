@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Landing.scss";
-import Logo from "../asserts/logo.png";
+import Logo from "../asserts/pawprint.svg";
 import GroomingImg from '../asserts/grooming.svg';
 import BoardingImg from '../asserts/boarding.svg';
 import DayCareImg from '../asserts/daycare.svg';
@@ -31,8 +31,8 @@ export default class Landing extends Component {
     this.booknow_toggle = this.booknow_toggle.bind(this);
     this.google_placecaller = this.google_placecaller.bind(this);
   }
-
-  componentWillMount() {
+// componentDidMount
+componentDidMount() {
     let s =document.createElement('script')
     s.src="https://maps.googleapis.com/maps/api/js?key="+process.env.REACT_APP_PLACES_API+"&libraries=places"
     document.body.appendChild(s);

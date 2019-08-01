@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import LazyLoad from "react-lazyload";
 import Arrrow from '../asserts/arrow.svg';
 import "./Reviews.scss";
 import StarRatingComponent from 'react-star-rating-component';
+
+
 export default class Reviews extends Component {
   constructor() {
     
@@ -21,6 +24,7 @@ export default class Reviews extends Component {
   render() {
     return (
       <div className="wrapper">
+        <LazyLoad key={'lazy'} height={200} once>
         <div className="review-card">
           <div
             className="review-control"
@@ -73,6 +77,7 @@ export default class Reviews extends Component {
             <img src={Arrrow} alt='arrow' />
           </div>
         </div>
+        </LazyLoad>
       </div>
     );
   }

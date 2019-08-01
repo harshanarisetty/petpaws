@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-scroll";
 import { Link as RouteLink, withRouter } from "react-router-dom";
 
-import Logo from "../asserts/logo.png";
+import Logo from "../asserts/pawprint.svg";
 import "./NabBar.scss";
 import MaterialIcon from "material-icons-react";
 import BookNow from "../Booknow/Booknow";

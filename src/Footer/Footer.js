@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import MaterialIcon from "material-icons-react";
 import "./Footer.scss";
-import Logo from "../asserts/logo.png";
+import Logo from "../asserts/pawprint.svg";
 import LazyLoad from "react-lazyload";
 export default class Footer extends Component {
   render() {
