@@ -79,7 +79,7 @@ componentDidMount() {
         offer: 0,
         title: "Boarding",
         logo: <img src={BoardingImg} className="icon" alt="sercice-icon" />,
-        description: ` Petpaws is devoted to providing a safe, secure and happy home for your pets, in Chennai, while you relax and take a short/long break. Our boarding locations are tailored to meet your pet's needs. Petpaws promises to create a memorable stay for your pet. We at Petpaws also help your pet to make new friends, so they can hang out altogether and enjoy their vacation.`,
+        description: ` PetPaws is devoted to providing a safe, secure, and happy home for your pets in Chennai while you relax and take a short/long break. Our boarding locations are tailored to meet your pet's needs. PetPaws promises to create a memorable stay for your pet. We at PetPaws also help your pet make new friends and enjoy their vacation together.`,
         images: [{ Logo }, { Logo }, { Logo }],
         keyfacilities: ['Pick-Up And Drop', 'Healthy Food', 'Daily Walk', 'Regular Videos And Photos'],
         calltoaction: "Learn More",
@@ -90,7 +90,7 @@ componentDidMount() {
         offer: 0,
         title: "Day Care",
         logo: <img src={DayCareImg} className="icon" alt="sercice-icon" />,
-        description: ` At Petpaws your pet's food is just the same as at home. Food is prepared fresh and with great care to make sure that it tastes and remains the same as what the pet is used to eating at home. All you need to do is to leave instructions with regard to your pet's eating habit and we would make sure that when it comes to food your pet never has to miss home.`,
+        description: ` At PetPaws your pet's food is just the same as at home. Food is prepared fresh and with great care to make sure that it tastes and remains the same as what the pet is used to eating at home. All you have to do is to leave instructions with regard to your pet's eating habit and we make sure that when it comes to food, your pet will never miss home.`,
         images: [{ Logo }, { Logo }, { Logo }],
         keyfacilities: ['Clean Environment', 'Freindly Mates', 'Gaming Activity', 'Regular Videos And Photos'],
         calltoaction: "Learn More",
@@ -134,7 +134,7 @@ componentDidMount() {
           </div>
         </div>
         <div id="about" className="about">
-          <div className="section-title">Who are we</div>
+          <div className="section-title">Who We Are</div>
           <div className="horizaontal-line" />
           <div className="about-grid">
             <div className="dog">
@@ -145,7 +145,7 @@ componentDidMount() {
             <div className="content">
               {/* {!this.state.about_read_state ? (
               <div className="small_content">
-                Petpaws is a Home away from your home when you’re away, Pet
+                PetPaws is a Home away from your home when you’re away, Pet
                 paws is a home based pet boarding service and also we have 2
                 adorable puggies named Simba and Chin-Chu.....
                 <span
@@ -157,10 +157,10 @@ componentDidMount() {
               </div>
             ) : (
               <div className="full_content">
-                Petpaws A Home away from your home when you’re away, Petpaws
+                PetPaws A Home away from your home when you’re away, PetPaws
                 is a home based pet boarding service and also we have 2 adorable
                 puggs named Simba and Chin-Chu to ensure that your pet does not
-                feel alone in your absence. Petpaws offers unparalleled care
+                feel alone in your absence. PetPaws offers unparalleled care
                 and unexpected value in home based dog boarding. Our in-house
                 facility exceeds all standards to ensure the perfect environment
                 for your pets by combining premium & personalized services to
@@ -181,19 +181,19 @@ componentDidMount() {
               </div>
             )} */}
               <div className="full_content">
-                Petpaws is home away from your home for your pet when you’re
-                away, Petpaws is a home based pet boarding service and also we
-                have 2 adorable pugs named Simba and Chin-Chu to ensure that
-                your pet does not feel alone in your absence. Petpaws offers
-                unparalleled care and unexpected value in home based dog
+                PetPaws is home away from your home for your pet when you’re
+                away. PetPaws is a home-based pet boarding service that offers
+                unparalleled care and unexpected value in home-based dog
                 boarding. Our in-house facility exceeds all standards to ensure
                 the perfect environment for your pets by combining premium &
-                personalized services to assure an incomparable peace of mind.
+                personalized services to assure an incomparable peace of mind. Furthermore, we
+                have two adorable pugs named Simba and Chin-Chu to ensure that
+                your pet does not feel alone in your absence.
                 <br />
                 <br />
                 <br />
                 Our pledge to you is to provide your pets with the highest
-                quality pet care available today. We promise a safe, comfortable
+                quality pet care available. We promise a safe, comfortable,
                 and fun-filled experience for each one of our furry friends
                 while their parents are away.
                 {/* <span
@@ -211,11 +211,7 @@ componentDidMount() {
           <div className="horizaontal-line" />
           <div className="section-description">
             <p>
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-              esse molestie consequat, Duis autem vel eum iriure dolor in
-              hendrerit in vulputate velit esse molestie consequat,Duis autem
-              vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-              consequat,
+              We offer a wide variety of services to ensure all of your pet-related needs are not only met, but exceeded. These services include boarding, day care, and grooming. More information about these services is available below. You can always remain confident that our services are of the highest caliber.
             </p>
           </div>
           <div className="cards">
@@ -229,11 +225,7 @@ componentDidMount() {
           <div className="horizaontal-line" />
           <div className="section-description">
             <p>
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-              esse molestie consequat, Duis autem vel eum iriure dolor in
-              hendrerit in vulputate velit esse molestie consequat,Duis autem
-              vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-              consequat,
+              The main goals at PetPaws are to make the pet's stay as enjoyable as possible and to exceed our user's expactations. We believe that establishing a healthy relationship with our users in essential to acheiving these goals. Here are a few experiences from our users.
             </p>
           </div>
           {this.state.placedatacall && <ReviewBlock reviews={this.state.reviews} />}

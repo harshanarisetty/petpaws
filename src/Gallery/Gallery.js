@@ -28,7 +28,7 @@ export default class Gallery extends Component {
     return (
       <div className="gallery_wrapper">
         <span>
-          Do chek out our instagram
+        Follow us on Instagram
           <a
             href="https://www.instagram.com/harshanarisetty"
             rel="noopener noreferrer"
@@ -37,7 +37,7 @@ export default class Gallery extends Component {
             {" "}
             @petpaws{" "}
           </a>
-          for more images
+          in order to stay up to date and see what the pets are up to in our home.
         </span>
         <div className="gallery">{this.state.photos}</div>
       </div>

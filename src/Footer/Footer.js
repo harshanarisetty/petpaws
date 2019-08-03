@@ -13,7 +13,7 @@ export default class Footer extends Component {
             <span className="foot-brand">PetPaws</span>
             <p className="foot-description">
               Our pledge to you is to provide your pets with the highest quality
-              pet care available today. We promise a safe, comfortable and
+              pet care available today. We promise a safe, comfortable, and
               fun-filled experience for each one of our furry friends while
               their parents are away.
             </p>

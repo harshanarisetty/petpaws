@@ -92,7 +92,7 @@ class NavBar extends Component {
                         duration={500}
                         onClick={this.closehammobile}
                     >
-                    About us
+                    About Us
                         
                     </Link>
                     :
@@ -157,7 +157,7 @@ class NavBar extends Component {
                         offset={-70}
                         duration={500}
                         onClick={this.closehammobile}
-                    > Contact us
+                    > Contact Us
                         
                     </Link>:<RouteLink className='Navlink' to='/'> Contact us</RouteLink>}
                 </li>
