@@ -30,7 +30,7 @@ export default class Gallery extends Component {
         <span>
         Follow us on Instagram
           <a
-            href="https://www.instagram.com/harshanarisetty"
+            href="https://www.instagram.com/petpaws.petshomestay/"
             rel="noopener noreferrer"
             target="_blank"
           >

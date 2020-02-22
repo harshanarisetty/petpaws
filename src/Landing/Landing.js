@@ -57,7 +57,6 @@ componentDidMount() {
     var service = new google.maps.places.PlacesService(map);
     service.getDetails(request, (res,status) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
-        console.log(res);
         this.setState({ photos: res.photos });
         this.setState({ reviews: res.reviews });
         this.setState({ placedatacall: true });
